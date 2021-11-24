@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden;   */
+}
+
+body {
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.phone {
+  width: 300px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 265px;
+  border-radius: 30px;
+  background-color: #eae2b7;
+  height: 565px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 11;
+}
+
+.logo-div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-top: 170px;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+.bounce {
+  animation: bounce 1.5s ease;
+  animation-fill-mode: both;
+}
+
+.logo-div img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes logoBounce {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  20% {
+    width: 70px;
+    height: 70px;
+    top: -10;
+  }
+  25% {
+    width: 60px;
+    height: 60px;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+  }
+  75% {
+    width: 100px;
+    height: 100px;
+  }
+  95% {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    transform: rotateZ(20deg);
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    transform: rotateZ(0deg);
+  }
+}
+
+.loader-div {
+  width: 184px;
+  height: 6px;
+  background: white;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  top: 290px;
+  transition: all 0.5s ease;
+  z-index: 99;
+}
+
+.loader {
+  width: 0px;
+  height: 100%;
+  background-color: #f77f00;
+  border-radius: 25px;
+}
+
+.page2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 98;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.logo-header {
+  height: 55px;
+  background-color: #f77f00;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  width: 266px;
+  border-radius: 28px 28px 5px 5px;
+}
+
+.logo-header img {
+  width: 40px;
+}
+
+.background-logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-top: 115px;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.background-logo img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.add-todo-button-div {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transition: all 0.5s linear;
+  transform: translate(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.add-todo-button-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.add-todo-button-div:active {
+  width: 50px;
+  height: 50px;
+}
+
+.hover-icon {
+  position: absolute;
+  bottom: 70px;
+  width: 130px;
+  left: 90px;
+  animation: hover 1.5s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes hover {
+  0% {
+    bottom: 70px;
+  }
+  25% {
+    bottom: 80px;
+  }
+}
+
+.add-task-div {
+  width: 200px;
+  background-color: #fcbf49;
+  /* height: 180px; */
+  border-radius: 10px;
+  transform: translate(-50%);
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  margin-top: 50px;
+}
+
+.add-task-div img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.add-task {
+  background-color: white;
+  height: 130px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.done-button {
+  background-color: white;
+  width: 20.5%;
+  height: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 5px 9px;
+  cursor: pointer;
+}
+.task-input[type="text"] {
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: bold;
+  background-color: transparent;
+}
+.task-input {
+  width: 180px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  border-radius: 0px 0px 2px 2px;
+  outline: none;
+  opacity: 0.5;
+}
+
+.task-input:focus {
+  opacity: 1;
+}
+
+.add-time-div {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  margin-top: 20px;
+}
+
+.add-time-div input[type="text"] {
+  width: 40px;
+  height: 10px;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  border-bottom: 2px solid #9b9b9b;
+  border-radius: 0px 0px 2px 2px;
+  outline: none;
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.add-time-div input[type="text"]:focus {
+  opacity: 1;
+}
+
+.add-date-div input[type="text"] {
+  width: 40px;
+  height: 10px;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  border-bottom: 2px solid #9b9b9b;
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: bold;
+  border-radius: 0px 0px 2px 2px;
+  outline: none;
+  opacity: 0.5;
+}
+
+.add-date-div {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  margin-top: 20px;
+  color: #9b9b9b;
+}
+
+.add-date-div input[type="text"]:focus {
+  opacity: 1;
+}
+
+.todo-item-container {
+  background-color: transparent;
+  width: 245px;
+  transition: all 0.4s ease;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.todo-item {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
+  margin-top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.time-and-date-container {
+  height: 15px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.time-div {
+  width: 25%;
+  height: 100%;
+  background-color: #fcbf49;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.time-divspan {
+  margin-right: 15px;
+}
+
+.date-div {
+  width: 75%;
+  height: 100%;
+  background-color: #003049;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+.todo-task {
+  position: relative;
+  top: 20px;
+  font-size: 16px;
+  left: 10px;
+  font-weight: bolder;
+  user-select: none;
+  width: 190px;
+}
+
+.cancle-task {
+  border: 1.5px solid black;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-images {
+  width: 100%;
+  height: 100%;
+}
+
+.green-tick-images {
+  width: 60%;
+  height: 60%;
+}
+
+.cancle {
+  text-decoration: line-through;
+  text-decoration-style: double;
+}
